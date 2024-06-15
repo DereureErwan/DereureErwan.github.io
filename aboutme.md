@@ -1,16 +1,10 @@
 ---
 layout: page
 title: About me
-subtitle: Why you'd want to go on a date with me
 ---
 
-My name is Inigo Montoya. I have the following qualities:
+I am currently looking for a PostDoc position in Image Processing and Applied Mathematics. I am especially interested in Biomedical Imaging and Remote Sensing.
 
-- I rock a great mustache
-- I'm extremely loyal to my family
+Before that, I completed my PhD in Biomedical Image Analysis under the supervision of Christophe Kervazo, Elsa Angelini (**IMAGES** group, Télécom Paris) and Jean-Christophe Olivo-Marin (**BIA Unit**, Institut Pasteur). I worked on optimization based methods for **Blind Source Separation applied on Bioluminescent Imaging** and on strengthening the **robustness of the quantification** of these images to improve experimental protocols.
 
-What else do you need?
-
-### My story
-
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](https://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+I received both my M.Sc. degree in Applied Mathematics and Computer science from CentraleSupélec, France and my M.Sc. in Fundamental and Applied Mathematics from the University of Lorraine, France, in 2020.
