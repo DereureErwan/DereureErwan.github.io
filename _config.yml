@@ -23,6 +23,7 @@ navbar-links:
   About Me: "aboutme"
   Publications: "publications"
   Teaching: "teaching"
+  CV: "cv"
   # Resources:
   #   - Beautiful Jekyll: "https://beautifuljekyll.com"
   #   - Learn markdown: "https://www.markdowntutorial.com/"
