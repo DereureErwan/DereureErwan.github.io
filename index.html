@@ -116,30 +116,20 @@
     }
     .social-links a:hover { background: var(--accent); color: #fff; }
 
-    .avatar-wrap {
-      width: 130px;
-      flex-shrink: 0;
-    }
+    .avatar-wrap { width: 130px; flex-shrink: 0; }
     .avatar-wrap img {
-      width: 130px;
-      height: 130px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid var(--rule);
-      display: block;
+      width: 130px; height: 130px;
+      border-radius: 50%; object-fit: cover;
+      border: 3px solid var(--rule); display: block;
     }
     .avatar-placeholder {
-      width: 130px;
-      height: 130px;
+      width: 130px; height: 130px;
       border-radius: 50%;
       border: 3px solid var(--rule);
       background: linear-gradient(135deg, #c8e6d4, #a8d5bb);
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      display: flex; align-items: center; justify-content: center;
       font-family: 'DM Serif Display', serif;
-      font-size: 2.5rem;
-      color: var(--accent);
+      font-size: 2.5rem; color: var(--accent);
     }
 
     /* ── SECTIONS ── */
@@ -222,28 +212,12 @@
     .pub-link:hover { opacity: 0.65; }
 
     /* ── EDUCATION ── */
-    .edu-list { display: flex; flex-direction: column; gap: 0; }
+    .edu-list { display: flex; flex-direction: column; }
     .edu-item {
-      display: grid;
-      grid-template-columns: 56px 1fr;
-      gap: 1.2rem;
       padding: 1.2rem 0;
       border-bottom: 1px dashed var(--rule);
-      align-items: start;
     }
     .edu-item:last-child { border-bottom: none; }
-    .edu-logo {
-      width: 44px;
-      height: 44px;
-      border-radius: 6px;
-      background: linear-gradient(135deg, #e0ece5, #c8ddd2);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.3rem;
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
     .edu-degree {
       font-family: 'DM Serif Display', serif;
       font-size: 1rem;
@@ -261,25 +235,18 @@
     .teaching-role span { font-family: 'DM Sans', sans-serif; font-size: 0.9rem; font-weight: 400; color: var(--mid); font-style: italic; }
     .teaching-list { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.8rem; }
     .teaching-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.6rem;
-      font-size: 0.91rem;
-      color: #3a3830;
+      display: flex; align-items: flex-start; gap: 0.6rem;
+      font-size: 0.91rem; color: #3a3830;
     }
     .teaching-list li::before {
-      content: '→';
-      color: var(--accent-light);
-      flex-shrink: 0;
-      margin-top: 0.05rem;
+      content: '→'; color: var(--accent-light);
+      flex-shrink: 0; margin-top: 0.05rem;
     }
 
     /* ── FOOTER ── */
     footer {
-      text-align: center;
-      font-size: 0.78rem;
-      color: var(--mid);
-      padding: 2rem 0 3rem;
+      text-align: center; font-size: 0.78rem;
+      color: var(--mid); padding: 2rem 0 3rem;
     }
 
     /* ── ANIMATIONS ── */
@@ -319,16 +286,15 @@
       <h1>Erwan Dereure</h1>
       <p class="hero-subtitle">Postdoctoral Scientist · Institut de Biologie de l'École Normale Supérieure, Paris · Computational Biology and Applied Mathematics Unit</p>
       <p class="hero-bio">
-        I am currently looking for a <strong>PostDoc position</strong> in Image Processing and Applied Mathematics,
-        with a particular interest in Biomedical Imaging and Remote Sensing.
+        I am a postdoctoral researcher working in the <a href="https://www.ibens.bio.ens.psl.eu/spip.php?rubrique40&lang=fr">Computational Biology and Applied Mathematics Unit</a> of the Institut de Biologie de l'École Normale Supérieure (IBENS) under the supervision of David Holcman. My current research focuses on the analysis of neuropathology images to quantify hallmarks of neurodegenerative diseases, combining deep learning algorithms with spatial statistics. More broadly, I am interested in leveraging biological imaging to better understand phenomena at the cellular and molecular levels. I am particularly drawn to self-supervised learning methods and their potential to unlock the wealth of unlabeled biological imaging data that remains largely unexploited, especially in the context of multi-modal approaches.
       </p>
       <p class="hero-bio">
-        I completed my PhD in Biomedical Image Analysis under the supervision of
+        Before that, I completed my PhD in Biomedical Image Analysis under the supervision of
         <a href="https://sites.google.com/view/christophekervazo/">Christophe Kervazo</a>, <a href="https://perso.telecom-paristech.fr/angelini/">Elsa Angelini</a>
-        (<a href="https://www.telecom-paris.fr/en/research/labs/information-processing-ltci/teams/image-modeling-analysis-geometry-synthesis"> </a><strong>IMAGES</strong> group, Télécom Paris</a>) and
+        (<a href="https://www.telecom-paris.fr/en/research/labs/information-processing-ltci/teams/image-modeling-analysis-geometry-synthesis"><strong>IMAGES</strong> group, Télécom Paris</a>) and
         <a href="https://research.pasteur.fr/en/member/jean-christophe-olivo-marin/">Jean-Christophe Olivo-Marin</a>
-        (<a href="https://research.pasteur.fr/en/team/bioimage-analysis/"> </a><strong>Biological Image Analysis Unit</strong>, Institut Pasteur</a>).
-        My thesis focused on optimization-based methods for <em>Blind Source Separation applied to Bioluminescent Imaging</em>
+        (<a href="https://research.pasteur.fr/en/team/bioimage-analysis/"><strong>Biological Image Analysis Unit</strong>, Institut Pasteur</a>).
+        My thesis focused on optimization-based methods for Blind Source Separation applied to Bioluminescent Imaging
         and on strengthening the robustness of quantification to improve experimental protocols.
       </p>
       <div class="social-links">
@@ -339,7 +305,7 @@
       </div>
     </div>
     <div class="avatar-wrap">
-      <div class="avatar-placeholder">ED</div>
+      <img src="photo_couleur.jpg" alt="Erwan Dereure" />
     </div>
   </div>
 
@@ -350,15 +316,14 @@
     <div class="pub-group-title">Journal</div>
     <div class="pub-list">
       <div class="pub">
-        <div class="pub-title">Wavelet transform based non-negative matrix factorization for bioluminescence imaging with warping variability</div>
+        <div class="pub-title">Assessing One-Dimensional Cluster Stability by Extreme-Point Trimming</div>
         <div class="pub-venue">In preparation</div>
         <div class="pub-authors">
-          <strong>Erwan Dereure</strong>, Christophe Kervazo, Johanne Seguin, Anikitos Garofalakis,
-          Nathalie Mignet, Elsa Angelini, Jean-Christophe Olivo-Marin
+          <strong>Erwan Dereure</strong>, Emmanuel Akame Mfoumou, David Holcman
         </div>
-        <span class="pub-tag inprep">Preprint</span>
+        <a href="https://arxiv.org/pdf/2509.00258?" class="pub-link">↗ Preprint</a>
       </div>
-        
+
       <div class="pub">
         <div class="pub-title">Wavelet transform based non-negative matrix factorization for bioluminescence imaging with warping variability</div>
         <div class="pub-venue">In preparation</div>
@@ -366,7 +331,7 @@
           <strong>Erwan Dereure</strong>, Christophe Kervazo, Johanne Seguin, Anikitos Garofalakis,
           Nathalie Mignet, Elsa Angelini, Jean-Christophe Olivo-Marin
         </div>
-        <span class="pub-tag inprep">Preprint</span>
+        <span class="pub-tag inprep">In preparation</span>
       </div>
     </div>
 
@@ -379,7 +344,7 @@
         <div class="pub-authors">
           <strong>Erwan Dereure</strong>, Robin Louiset, Laura Parkkinen, David A Menassa, David Holcman
         </div>
-        <a href="https://arxiv.org/abs/2511.16268" class="pub-link">↗ Paper</a>
+        <a href="https://arxiv.org/pdf/2511.16268" class="pub-link">↗ Paper</a>
       </div>
 
       <div class="pub">
@@ -411,7 +376,20 @@
         </div>
         <a href="https://telecom-paris.hal.science/hal-04195670/" class="pub-link">↗ Paper</a>
       </div>
+      
+      <div class="pub-group-title">PhD Thesis</div>
+    <div class="pub-list">
 
+      <div class="pub">
+        <div class="pub-title">Quantitative analysis of bioluminescent signals in preclinical imaging</div>
+        <div class="pub-venue">Institut Pasteur and Télécom Paris, 2021-2024</div>
+        <div class="pub-authors">
+          <strong>Erwan Dereure</strong>
+        </div>
+        <a href="https://theses.hal.science/tel-04650075/document" class="pub-link">↗ Thesis PDF</a>
+      </div>
+
+    </div>
     </div>
   </section>
 
@@ -421,27 +399,21 @@
     <div class="edu-list">
 
       <div class="edu-item">
-        <div>
-          <div class="edu-degree">PhD in Biomedical Image Analysis</div>
-          <div class="edu-institution">Télécom Paris &amp; Institut Pasteur, Paris</div>
-          <div class="edu-year">2021 – 2024</div>
-        </div>
+        <div class="edu-degree">PhD in Biomedical Image Analysis</div>
+        <div class="edu-institution">Institut Pasteur &amp; Télécom Paris , Paris</div>
+        <div class="edu-year">2021 – 2024</div>
       </div>
 
       <div class="edu-item">
-        <div>
-          <div class="edu-degree">M.Sc. in Applied Mathematics &amp; Computer Science</div>
-          <div class="edu-institution">CentraleSupélec, France</div>
-          <div class="edu-year">2016 – 2020</div>
-        </div>
+        <div class="edu-degree">M.Sc. in Applied Mathematics &amp; Computer Science</div>
+        <div class="edu-institution">CentraleSupélec, France</div>
+        <div class="edu-year">2016 – 2020</div>
       </div>
 
       <div class="edu-item">
-        <div>
-          <div class="edu-degree">M.Sc. in Fundamental and Applied Mathematics</div>
-          <div class="edu-institution">University of Lorraine, France</div>
-          <div class="edu-year">2019 – 2020</div>
-        </div>
+        <div class="edu-degree">M.Sc. in Fundamental and Applied Mathematics</div>
+        <div class="edu-institution">University of Lorraine, France</div>
+        <div class="edu-year">2019 – 2020</div>
       </div>
 
     </div>
