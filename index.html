@@ -207,6 +207,19 @@
       border-radius: 3px;
     }
     .pub-tag.inprep { background: #f0ebe0; color: #8a7a5a; }
+    .pub-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid var(--accent-light);
+      transition: opacity 0.2s;
+    }
+    .pub-link:hover { opacity: 0.65; }
 
     /* ── EDUCATION ── */
     .edu-list { display: flex; flex-direction: column; gap: 0; }
@@ -311,18 +324,18 @@
       </p>
       <p class="hero-bio">
         I completed my PhD in Biomedical Image Analysis under the supervision of
-        <a href="#">Christophe Kervazo</a>, <a href="#">Elsa Angelini</a>
-        (<strong>IMAGES</strong> group, <a href="https://www.telecom-paris.fr">Télécom Paris</a>) and
-        <a href="#">Jean-Christophe Olivo-Marin</a>
-        (<strong>BIA Unit</strong>, <a href="https://www.pasteur.fr">Institut Pasteur</a>).
+        <a href="https://sites.google.com/view/christophekervazo/">Christophe Kervazo</a>, <a href="https://perso.telecom-paristech.fr/angelini/">Elsa Angelini</a>
+        (<a href="https://www.telecom-paris.fr/en/research/labs/information-processing-ltci/teams/image-modeling-analysis-geometry-synthesis"> </a><strong>IMAGES</strong> group, Télécom Paris</a>) and
+        <a href="https://research.pasteur.fr/en/member/jean-christophe-olivo-marin/">Jean-Christophe Olivo-Marin</a>
+        (<a href="https://research.pasteur.fr/en/team/bioimage-analysis/"> </a><strong>Biological Image Analysis Unit</strong>, Institut Pasteur</a>).
         My thesis focused on optimization-based methods for <em>Blind Source Separation applied to Bioluminescent Imaging</em>
         and on strengthening the robustness of quantification to improve experimental protocols.
       </p>
       <div class="social-links">
         <a href="mailto:erwan.dereure@gmail.com">Email</a>
-        <a href="https://scholar.google.com">Google Scholar</a>
-        <a href="https://www.linkedin.com/in/">LinkedIn</a>
-        <a href="https://dereureerwan.github.io/cv">CV</a>
+        <a href="https://scholar.google.fr/citations?user=oJK07y8AAAAJ&hl=fr">Google Scholar</a>
+        <a href="https://www.linkedin.com/in/erwan-dereure-084b11146/">LinkedIn</a>
+        <a href="pdfs/CV.pdf">CV</a>
       </div>
     </div>
     <div class="avatar-wrap">
@@ -338,17 +351,35 @@
     <div class="pub-list">
       <div class="pub">
         <div class="pub-title">Wavelet transform based non-negative matrix factorization for bioluminescence imaging with warping variability</div>
-        <div class="pub-venue">In preparation, 2024</div>
+        <div class="pub-venue">In preparation</div>
         <div class="pub-authors">
           <strong>Erwan Dereure</strong>, Christophe Kervazo, Johanne Seguin, Anikitos Garofalakis,
           Nathalie Mignet, Elsa Angelini, Jean-Christophe Olivo-Marin
         </div>
-        <span class="pub-tag inprep">In preparation</span>
+        <span class="pub-tag inprep">Preprint</span>
+        
+      <div class="pub">
+        <div class="pub-title">Wavelet transform based non-negative matrix factorization for bioluminescence imaging with warping variability</div>
+        <div class="pub-venue">In preparation</div>
+        <div class="pub-authors">
+          <strong>Erwan Dereure</strong>, Christophe Kervazo, Johanne Seguin, Anikitos Garofalakis,
+          Nathalie Mignet, Elsa Angelini, Jean-Christophe Olivo-Marin
+        </div>
+        <span class="pub-tag inprep">Preprint</span>
       </div>
     </div>
 
     <div class="pub-group-title">Peer-reviewed Conferences</div>
     <div class="pub-list">
+
+      <div class="pub">
+        <div class="pub-title">Weakly Supervised Segmentation and Classification of Alpha-Synuclein Aggregates in Brightfield Midbrain Images</div>
+        <div class="pub-venue">IEEE 23rd International Symposium on Biomedical Imaging (ISBI), 2026</div>
+        <div class="pub-authors">
+          <strong>Erwan Dereure</strong>, Robin Louiset, Laura Parkkinen, David A Menassa, David Holcman
+        </div>
+        <a href="https://arxiv.org/abs/2511.16268" class="pub-link">↗ Paper</a>
+      </div>
 
       <div class="pub">
         <div class="pub-title">Wavelet-based sparse non-negative matrix factorization for bioluminescent imaging unmixing</div>
@@ -357,7 +388,7 @@
           <strong>Erwan Dereure</strong>, Christophe Kervazo, Johanne Seguin, Anikitos Garofalakis,
           Nathalie Mignet, Elsa Angelini, Jean-Christophe Olivo-Marin
         </div>
-        <span class="pub-tag">Conference</span>
+        <a href="https://ieeexplore.ieee.org/abstract/document/10635436/" class="pub-link">↗ Paper</a>
       </div>
 
       <div class="pub">
@@ -367,7 +398,7 @@
           <strong>Erwan Dereure</strong>, Christophe Kervazo, Johanne Seguin, Anikitos Garofalakis,
           Nathalie Mignet, Elsa Angelini, Jean-Christophe Olivo-Marin
         </div>
-        <span class="pub-tag">Conference</span>
+        <a href="https://ieeexplore.ieee.org/abstract/document/10230751/" class="pub-link">↗ Paper</a>
       </div>
 
       <div class="pub">
@@ -377,7 +408,7 @@
           <strong>Erwan Dereure</strong>, Elsa Angelini, Anikitos Garofalakis, Johanne Seguin,
           Nathalie Mignet, Jean-Christophe Olivo-Marin
         </div>
-        <span class="pub-tag">Conference</span>
+        <a href="https://telecom-paris.hal.science/hal-04195670/" class="pub-link">↗ Paper</a>
       </div>
 
     </div>
@@ -393,7 +424,7 @@
         <div>
           <div class="edu-degree">PhD in Biomedical Image Analysis</div>
           <div class="edu-institution">Télécom Paris &amp; Institut Pasteur, Paris</div>
-          <div class="edu-year">2020 – 2024</div>
+          <div class="edu-year">2021 – 2024</div>
         </div>
       </div>
 
@@ -402,7 +433,7 @@
         <div>
           <div class="edu-degree">M.Sc. in Applied Mathematics &amp; Computer Science</div>
           <div class="edu-institution">CentraleSupélec, France</div>
-          <div class="edu-year">2018 – 2020</div>
+          <div class="edu-year">2016 – 2020</div>
         </div>
       </div>
 
@@ -411,7 +442,7 @@
         <div>
           <div class="edu-degree">M.Sc. in Fundamental and Applied Mathematics</div>
           <div class="edu-institution">University of Lorraine, France</div>
-          <div class="edu-year">2018 – 2020</div>
+          <div class="edu-year">2019 – 2020</div>
         </div>
       </div>
 
@@ -438,7 +469,7 @@
 </main>
 
 <footer>
-  Erwan Dereure &nbsp;·&nbsp; 2024
+  Erwan Dereure &nbsp;·&nbsp; April 2026
 </footer>
 
 </body>
