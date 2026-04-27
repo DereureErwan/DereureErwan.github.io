@@ -1,5 +1,445 @@
----
-layout: home
-title: Erwan Dereure
-subtitle: PhD in Applied Mathematics and Image Processing
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Erwan Dereure</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream: #f7f4ef;
+      --ink: #1a1814;
+      --mid: #5a5650;
+      --accent: #2d6a4f;
+      --accent-light: #52b788;
+      --rule: #d8d2c8;
+      --card-bg: #ffffff;
+      --tag-bg: #e8f4ee;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(247, 244, 239, 0.88);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--rule);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 clamp(1.5rem, 5vw, 4rem);
+      height: 58px;
+    }
+    .nav-name {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.05rem;
+      letter-spacing: 0.01em;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a {
+      font-size: 0.82rem;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--mid);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--accent); }
+
+    /* ── LAYOUT ── */
+    .page { max-width: 780px; margin: 0 auto; padding: clamp(3rem, 8vw, 6rem) clamp(1.5rem, 5vw, 2.5rem); }
+
+    /* ── HERO ── */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 3rem;
+      align-items: start;
+      padding-bottom: 3.5rem;
+      border-bottom: 1px solid var(--rule);
+      animation: fadeUp 0.7s ease both;
+    }
+    .hero-text h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2.2rem, 5vw, 3rem);
+      line-height: 1.1;
+      margin-bottom: 0.35rem;
+    }
+    .hero-subtitle {
+      font-size: 0.95rem;
+      font-style: italic;
+      color: var(--mid);
+      margin-bottom: 1.4rem;
+      font-family: 'DM Serif Display', serif;
+    }
+    .hero-bio {
+      font-size: 0.97rem;
+      color: #3a3830;
+      max-width: 54ch;
+      margin-bottom: 1.6rem;
+    }
+    .hero-bio a { color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent-light); transition: opacity 0.2s; }
+    .hero-bio a:hover { opacity: 0.7; }
+
+    .social-links { display: flex; flex-wrap: wrap; gap: 0.55rem; }
+    .social-links a {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border: 1px solid var(--accent-light);
+      border-radius: 3px;
+      padding: 0.3rem 0.75rem;
+      text-decoration: none;
+      transition: background 0.18s, color 0.18s;
+    }
+    .social-links a:hover { background: var(--accent); color: #fff; }
+
+    .avatar-wrap {
+      width: 130px;
+      flex-shrink: 0;
+    }
+    .avatar-wrap img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--rule);
+      display: block;
+    }
+    .avatar-placeholder {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      border: 3px solid var(--rule);
+      background: linear-gradient(135deg, #c8e6d4, #a8d5bb);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'DM Serif Display', serif;
+      font-size: 2.5rem;
+      color: var(--accent);
+    }
+
+    /* ── SECTIONS ── */
+    section { padding: 3rem 0; border-bottom: 1px solid var(--rule); animation: fadeUp 0.7s ease both; }
+    section:last-of-type { border-bottom: none; }
+
+    h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.55rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .pub-group-title {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--mid);
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px dashed var(--rule);
+    }
+    .pub-group-title:first-of-type { margin-top: 0; }
+
+    /* ── PUBLICATIONS ── */
+    .pub-list { display: flex; flex-direction: column; gap: 1.6rem; }
+    .pub {
+      background: var(--card-bg);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 1.3rem 1.5rem;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .pub:hover { box-shadow: 0 4px 24px rgba(0,0,0,0.07); transform: translateY(-2px); }
+
+    .pub-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.02rem;
+      line-height: 1.4;
+      margin-bottom: 0.35rem;
+      color: var(--ink);
+    }
+    .pub-venue {
+      font-size: 0.82rem;
+      font-style: italic;
+      color: var(--mid);
+      margin-bottom: 0.5rem;
+    }
+    .pub-authors {
+      font-size: 0.83rem;
+      color: var(--mid);
+      margin-bottom: 0.8rem;
+    }
+    .pub-authors strong { color: var(--ink); font-weight: 500; }
+    .pub-tag {
+      display: inline-block;
+      background: var(--tag-bg);
+      color: var(--accent);
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 0.18rem 0.55rem;
+      border-radius: 3px;
+    }
+    .pub-tag.inprep { background: #f0ebe0; color: #8a7a5a; }
+
+    /* ── EDUCATION ── */
+    .edu-list { display: flex; flex-direction: column; gap: 0; }
+    .edu-item {
+      display: grid;
+      grid-template-columns: 56px 1fr;
+      gap: 1.2rem;
+      padding: 1.2rem 0;
+      border-bottom: 1px dashed var(--rule);
+      align-items: start;
+    }
+    .edu-item:last-child { border-bottom: none; }
+    .edu-logo {
+      width: 44px;
+      height: 44px;
+      border-radius: 6px;
+      background: linear-gradient(135deg, #e0ece5, #c8ddd2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .edu-degree {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1rem;
+      line-height: 1.3;
+    }
+    .edu-institution { font-size: 0.87rem; color: var(--mid); margin-top: 0.1rem; }
+    .edu-year { font-size: 0.8rem; color: var(--accent); font-weight: 500; margin-top: 0.15rem; }
+
+    /* ── TEACHING ── */
+    .teaching-role {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.05rem;
+      margin-bottom: 0.6rem;
+    }
+    .teaching-role span { font-family: 'DM Sans', sans-serif; font-size: 0.9rem; font-weight: 400; color: var(--mid); font-style: italic; }
+    .teaching-list { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.8rem; }
+    .teaching-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      font-size: 0.91rem;
+      color: #3a3830;
+    }
+    .teaching-list li::before {
+      content: '→';
+      color: var(--accent-light);
+      flex-shrink: 0;
+      margin-top: 0.05rem;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center;
+      font-size: 0.78rem;
+      color: var(--mid);
+      padding: 2rem 0 3rem;
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    section:nth-child(2) { animation-delay: 0.1s; }
+    section:nth-child(3) { animation-delay: 0.2s; }
+    section:nth-child(4) { animation-delay: 0.3s; }
+
+    @media (max-width: 560px) {
+      .hero { grid-template-columns: 1fr; }
+      .avatar-wrap { order: -1; }
+      .avatar-wrap img, .avatar-placeholder { width: 90px; height: 90px; }
+      nav { padding: 0 1rem; }
+      .nav-links { gap: 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-name" href="#top">Erwan Dereure</a>
+  <ul class="nav-links">
+    <li><a href="#publications">Publications</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#teaching">Teaching</a></li>
+  </ul>
+</nav>
+
+<main class="page" id="top">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-text">
+      <h1>Erwan Dereure</h1>
+      <p class="hero-subtitle">PhD · Applied Mathematics &amp; Image Processing</p>
+      <p class="hero-bio">
+        I am currently looking for a <strong>PostDoc position</strong> in Image Processing and Applied Mathematics,
+        with a particular interest in Biomedical Imaging and Remote Sensing.
+      </p>
+      <p class="hero-bio">
+        I completed my PhD in Biomedical Image Analysis under the supervision of
+        <a href="#">Christophe Kervazo</a>, <a href="#">Elsa Angelini</a>
+        (<strong>IMAGES</strong> group, <a href="https://www.telecom-paris.fr">Télécom Paris</a>) and
+        <a href="#">Jean-Christophe Olivo-Marin</a>
+        (<strong>BIA Unit</strong>, <a href="https://www.pasteur.fr">Institut Pasteur</a>).
+        My thesis focused on optimization-based methods for <em>Blind Source Separation applied to Bioluminescent Imaging</em>
+        and on strengthening the robustness of quantification to improve experimental protocols.
+      </p>
+      <div class="social-links">
+        <a href="mailto:erwan.dereure@gmail.com">Email</a>
+        <a href="https://scholar.google.com">Google Scholar</a>
+        <a href="https://www.linkedin.com/in/">LinkedIn</a>
+        <a href="https://dereureerwan.github.io/cv">CV</a>
+      </div>
+    </div>
+    <div class="avatar-wrap">
+      <div class="avatar-placeholder">ED</div>
+    </div>
+  </div>
+
+  <!-- PUBLICATIONS -->
+  <section id="publications">
+    <h2>Publications</h2>
+
+    <div class="pub-group-title">Journal</div>
+    <div class="pub-list">
+      <div class="pub">
+        <div class="pub-title">Wavelet transform based non-negative matrix factorization for bioluminescence imaging with warping variability</div>
+        <div class="pub-venue">In preparation, 2024</div>
+        <div class="pub-authors">
+          <strong>Erwan Dereure</strong>, Christophe Kervazo, Johanne Seguin, Anikitos Garofalakis,
+          Nathalie Mignet, Elsa Angelini, Jean-Christophe Olivo-Marin
+        </div>
+        <span class="pub-tag inprep">In preparation</span>
+      </div>
+    </div>
+
+    <div class="pub-group-title">Peer-reviewed Conferences</div>
+    <div class="pub-list">
+
+      <div class="pub">
+        <div class="pub-title">Wavelet-based sparse non-negative matrix factorization for bioluminescent imaging unmixing</div>
+        <div class="pub-venue">IEEE 21st International Symposium on Biomedical Imaging (ISBI), 2024</div>
+        <div class="pub-authors">
+          <strong>Erwan Dereure</strong>, Christophe Kervazo, Johanne Seguin, Anikitos Garofalakis,
+          Nathalie Mignet, Elsa Angelini, Jean-Christophe Olivo-Marin
+        </div>
+        <span class="pub-tag">Conference</span>
+      </div>
+
+      <div class="pub">
+        <div class="pub-title">Sparse non-negative matrix factorization for preclinical bioluminescent imaging</div>
+        <div class="pub-venue">IEEE 20th International Symposium on Biomedical Imaging (ISBI), 2023</div>
+        <div class="pub-authors">
+          <strong>Erwan Dereure</strong>, Christophe Kervazo, Johanne Seguin, Anikitos Garofalakis,
+          Nathalie Mignet, Elsa Angelini, Jean-Christophe Olivo-Marin
+        </div>
+        <span class="pub-tag">Conference</span>
+      </div>
+
+      <div class="pub">
+        <div class="pub-title">Factorisation Non-Négative de Matrice pour séparation de sources en Imagerie par Bioluminescence préclinique</div>
+        <div class="pub-venue">GRETSI'22 — XXVIIIème Colloque Francophone de Traitement du Signal et des Images, 2022</div>
+        <div class="pub-authors">
+          <strong>Erwan Dereure</strong>, Elsa Angelini, Anikitos Garofalakis, Johanne Seguin,
+          Nathalie Mignet, Jean-Christophe Olivo-Marin
+        </div>
+        <span class="pub-tag">Conference</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <h2>Education</h2>
+    <div class="edu-list">
+
+      <div class="edu-item">
+        <div class="edu-logo">🎓</div>
+        <div>
+          <div class="edu-degree">PhD in Biomedical Image Analysis</div>
+          <div class="edu-institution">Télécom Paris &amp; Institut Pasteur, Paris</div>
+          <div class="edu-year">2020 – 2024</div>
+        </div>
+      </div>
+
+      <div class="edu-item">
+        <div class="edu-logo">📐</div>
+        <div>
+          <div class="edu-degree">M.Sc. in Applied Mathematics &amp; Computer Science</div>
+          <div class="edu-institution">CentraleSupélec, France</div>
+          <div class="edu-year">2018 – 2020</div>
+        </div>
+      </div>
+
+      <div class="edu-item">
+        <div class="edu-logo">∑</div>
+        <div>
+          <div class="edu-degree">M.Sc. in Fundamental and Applied Mathematics</div>
+          <div class="edu-institution">University of Lorraine, France</div>
+          <div class="edu-year">2018 – 2020</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TEACHING -->
+  <section id="teaching">
+    <h2>Teaching</h2>
+    <div class="teaching-role">
+      Teaching Assistant <span>— Télécom Paris</span>
+    </div>
+    <p style="font-size:0.9rem; color: var(--mid);">Labs, project supervision and tutoring in the following topics:</p>
+    <ul class="teaching-list">
+      <li>Optical-flow methods for video processing</li>
+      <li>Image registration</li>
+      <li>Image segmentation for Biomedical imaging</li>
+      <li>Patch-based methods for Source Separation in Biomedical imaging</li>
+      <li>Mathematical Analysis</li>
+      <li>Energy transition and performance</li>
+    </ul>
+  </section>
+
+</main>
+
+<footer>
+  Erwan Dereure &nbsp;·&nbsp; 2024
+</footer>
+
+</body>
+</html>
